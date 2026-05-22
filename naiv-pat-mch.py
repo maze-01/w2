@@ -1,10 +1,8 @@
-text = input()
-pattern = input()
-ans = []
-for i in range(len(text) - len(pattern) + 1):
-    if text[i:i + len(pattern)] == pattern:
-        ans.append(str(i))
-if ans:
-    print(*ans, end=" ")
+t = input()
+p = input()
+r = [i for i in range(len(t) - len(p) + 1) if t[i:i + len(p)] == p]
+if r:
+    for i in r:
+        print(i, end=" ")
 else:
     print("No Match")
